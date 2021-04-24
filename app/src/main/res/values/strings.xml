@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">JokesNorrisIO</string>
+    <string name="choose_an_category">Choose an Category</string>
 </resources>
