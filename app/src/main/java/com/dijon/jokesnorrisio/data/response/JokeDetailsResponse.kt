@@ -1,5 +1,6 @@
 package com.dijon.jokesnorrisio.data.response
 
+import com.dijon.jokesnorrisio.data.model.Category
 import com.dijon.jokesnorrisio.data.model.Joke
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -7,7 +8,7 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class JokeDetailsResponse(
     @Json(name = "categories")
-    val categories: List<String>,
+    val categories: List<Category>,
     @Json(name = "created_at")
     val created_at: String,
     @Json(name = "icon_url")

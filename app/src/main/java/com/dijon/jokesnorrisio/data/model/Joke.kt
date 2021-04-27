@@ -1,7 +1,7 @@
 package com.dijon.jokesnorrisio.data.model
 
 data class Joke(
-    val categories: List<String>,
+    val categories: List<Category>,
     val created_at: String,
     val icon_url: String,
     val id: String,

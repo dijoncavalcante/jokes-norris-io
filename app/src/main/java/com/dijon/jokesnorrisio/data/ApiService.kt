@@ -7,7 +7,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 //https://api.chucknorris.io/jokes/random?category=animal
 //https://api.chucknorris.io/jokes/search?query={query}
 
-class ApiService {
+object ApiService {
     private fun initRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl("https://api.chucknorris.io/jokes/")

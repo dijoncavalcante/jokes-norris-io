@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">JokesNorrisIO</string>
     <string name="choose_an_category">Choose an Category</string>
+    <string name="books_error_401">Access denied.</string>
+    <string name="books_error_400_generic">Unhandled error.</string>
+    <string name="books_error_500_generic">Catastrophic error</string>
 </resources>
