@@ -6,6 +6,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dijon.jokesnorrisio.databinding.ActivityMainBinding
@@ -27,8 +28,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.resultLiveData.observe(this, {
             it?.let { categories ->
                 with(binding.rvCategory) {
-                    layoutManager =
-                        LinearLayoutManager(this@MainActivity, RecyclerView.VERTICAL, false)
+                    layoutManager = GridLayoutManager(this@MainActivity, 2)
                     setHasFixedSize(true)
                     adapter = CategoryAdapter(categories)
                 }
