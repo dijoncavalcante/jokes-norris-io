@@ -1,6 +1,7 @@
 package com.dijon.jokesnorrisio.data
 
 import com.dijon.jokesnorrisio.data.response.JokeBodyResponse
+import com.dijon.jokesnorrisio.data.response.JokeDetailsResponse
 import com.dijon.jokesnorrisio.data.response.ResultDetailResponse
 import retrofit2.Call
 import retrofit2.http.GET
@@ -15,11 +16,11 @@ interface JNServices {
     @GET("categories")
     fun getCategories(): Call<List<String>>
 
-//    @GET("random")
-//    fun getJokeRandonByCategory(
-//        //TODO o argumento "animal" esta estatico
-//        @Query("category") category: String = "animal"
-//    ): Call<JokeBodyResponse>
+    @GET("random")
+    fun getJokeRandonByCategory(
+        //TODO o argumento "animal" esta estatico
+        @Query("category") category: String = "animal"
+    ): Call<JokeDetailsResponse>
 //
 //    @GET("search")
 //    fun getSearch(

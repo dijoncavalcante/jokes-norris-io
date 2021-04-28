@@ -30,7 +30,13 @@ class MainActivity : AppCompatActivity() {
                 with(binding.rvCategory) {
                     layoutManager = GridLayoutManager(this@MainActivity, 2)
                     setHasFixedSize(true)
-                    adapter = CategoryAdapter(categories)
+                    adapter = CategoryAdapter(categories) { categoria ->
+                        val intent = DetailCategoryActivity.getStartIntent(
+                            this@MainActivity,
+                            categoria
+                        )
+                        this@MainActivity.startActivity(intent)
+                    }
                 }
             }
 
