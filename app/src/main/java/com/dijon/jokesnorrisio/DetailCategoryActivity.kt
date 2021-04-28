@@ -35,7 +35,7 @@ class DetailCategoryActivity : AppCompatActivity() {
             }
         })
 
-        viewModel.getRandonJokeByCategory()
+        viewModel.getRandonJokeByCategory(category)
 
     }
 

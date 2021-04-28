@@ -19,7 +19,7 @@ interface JNServices {
     @GET("random")
     fun getJokeRandonByCategory(
         //TODO o argumento "animal" esta estatico
-        @Query("category") category: String = "animal"
+        @Query("category") category: String//= "animal"
     ): Call<JokeDetailsResponse>
 //
 //    @GET("search")

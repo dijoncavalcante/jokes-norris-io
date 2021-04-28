@@ -14,8 +14,8 @@ class DetailCategoryViewModel : ViewModel() {
 
     val detailCategoryLiveData: MutableLiveData<List<Joke>> = MutableLiveData()
 
-    fun getRandonJokeByCategory() {
-        ApiService.service.getJokeRandonByCategory()
+    fun getRandonJokeByCategory(category: String) {
+        ApiService.service.getJokeRandonByCategory(category)
             .enqueue(object : Callback<JokeDetailsResponse> {
                 override fun onResponse(
                     call: Call<JokeDetailsResponse>,
@@ -43,9 +43,6 @@ class DetailCategoryViewModel : ViewModel() {
                 override fun onFailure(call: Call<JokeDetailsResponse>, t: Throwable) {
                     TODO("Not yet implemented")
                 }
-
-            }
-
-            )
+            })
     }
 }
