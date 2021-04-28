@@ -35,14 +35,17 @@
         android:id="@+id/tv_joke"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
-        android:lineSpacingExtra="5dp"
-        android:text="TextView"
-        android:textSize="36sp"
+        android:lineSpacingExtra="3dp"
+        android:maxHeight="300dp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/app_name" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tv_created"
@@ -74,8 +77,8 @@
         android:id="@+id/tv_updated"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:enabled="false"
         android:hint="@string/updated"
         android:textAlignment="center"
@@ -100,12 +103,11 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="90dp"
-        android:layout_marginTop="131dp"
+        android:layout_marginBottom="30dp"
         android:text="@string/refresh_joke"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_joke" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,7 +30,8 @@ class DetailCategoryActivity : AppCompatActivity() {
                     bindingDetail.tvJoke.text = jokes[0].value
                     bindingDetail.tvCreated.getEditText()?.setText(jokes[0].created_at)
                     bindingDetail.tvUpdated.getEditText()?.setText(jokes[0].updated_at)
-                    bindingDetail.tvCategory.text = jokes[0].categories.joinToString(",")
+                    bindingDetail.tvCategory.text =
+                        "Category:  ${jokes[0].categories.joinToString(",")}"
                 }
             }
         })
