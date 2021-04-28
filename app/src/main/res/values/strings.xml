@@ -1,7 +1,15 @@
 <resources>
+    <!--    str commom-->
     <string name="app_name">JokesNorrisIO</string>
-    <string name="choose_an_category">Choose an Category</string>
+
     <string name="books_error_401">Access denied.</string>
     <string name="books_error_400_generic">Unhandled error.</string>
     <string name="books_error_500_generic">Catastrophic error</string>
+    <!--    main_activity-->
+    <string name="choose_an_category">Choose an Category</string>
+    <!--    activity_detail_category-->
+    <string name="created">Created</string>
+    <string name="refresh_joke">Refresh the Joke</string>
+    <string name="fake_date">2020-01-05</string>
+    <string name="updated">Updated</string>
 </resources>

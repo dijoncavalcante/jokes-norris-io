@@ -8,7 +8,7 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class JokeDetailsResponse(
     @Json(name = "categories")
-    val categories: List<Category>,
+    val categories: List<String>,
     @Json(name = "created_at")
     val created_at: String,
     @Json(name = "icon_url")
@@ -24,10 +24,10 @@ data class JokeDetailsResponse(
 ) {
     fun getJokeModel() = Joke(
         categories = this.categories,
-        created_at = this.created_at,
+        created_at = this.created_at.substring(0, 10).trim(),
         icon_url = this.icon_url,
         id = this.id,
-        updated_at = this.updated_at,
+        updated_at = this.updated_at.substring(0, 10).trim(),
         url = this.url,
         value = this.value
     )
