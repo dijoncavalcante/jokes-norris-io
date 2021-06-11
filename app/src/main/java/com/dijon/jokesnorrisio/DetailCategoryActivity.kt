@@ -2,13 +2,11 @@ package com.dijon.jokesnorrisio
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import com.dijon.jokesnorrisio.databinding.ActivityDetailCategoryBinding
-import com.dijon.jokesnorrisio.databinding.ActivityMainBinding
 import com.dijon.jokesnorrisio.presentation.DetailCategoryViewModel
-import com.dijon.jokesnorrisio.presentation.ResultViewModel
 
 class DetailCategoryActivity : AppCompatActivity() {
 
@@ -18,8 +16,8 @@ class DetailCategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindingDetail = ActivityDetailCategoryBinding.inflate(layoutInflater)
         setContentView(bindingDetail.root)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true);
-        supportActionBar?.setDisplayShowHomeEnabled(true);
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
 
         val category: String = intent.getSerializableExtra(EXTRA_CATEGORY) as String
 
@@ -40,7 +38,11 @@ class DetailCategoryActivity : AppCompatActivity() {
 
         viewModel.getRandonJokeByCategory(category)
 
+        bindingDetail.btnRefreshJoke.setOnClickListener {
+            viewModel.getRandonJokeByCategory(category)
+        }
     }
+
 
     companion object {
         private const val EXTRA_TITLE = "EXTRA_TITLE"
