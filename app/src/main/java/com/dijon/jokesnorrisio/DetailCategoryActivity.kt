@@ -18,6 +18,8 @@ class DetailCategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindingDetail = ActivityDetailCategoryBinding.inflate(layoutInflater)
         setContentView(bindingDetail.root)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true);
+        supportActionBar?.setDisplayShowHomeEnabled(true);
 
         val category: String = intent.getSerializableExtra(EXTRA_CATEGORY) as String
 
