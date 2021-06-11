@@ -1,8 +1,6 @@
 package com.dijon.jokesnorrisio.data
 
-import com.dijon.jokesnorrisio.data.response.JokeBodyResponse
 import com.dijon.jokesnorrisio.data.response.JokeDetailsResponse
-import com.dijon.jokesnorrisio.data.response.ResultDetailResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
